@@ -8,6 +8,7 @@ function App() {
 
   const Home = () => <Typography variant="h4">Ana Sayfa İçeriği</Typography>;
   const About = () => <Typography variant="h4">Hakkımızda İçeriği</Typography>;
+  const Contact = () => <Typography variant="h4">İletişim İçeriği</Typography>;
 
   return (
     <BrowserRouter>
@@ -17,6 +18,8 @@ function App() {
             <Route index element={<Home />} />
             <Route path="about" element={<About />} />
             <Route path="login" element={<Login />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="*" element={<Typography variant="h4">404 - Sayfa Bulunamadı</Typography>} />
           </Route>
         </Routes>
       </AuthProvider>
