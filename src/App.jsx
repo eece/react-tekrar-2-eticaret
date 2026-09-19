@@ -4,9 +4,9 @@ import { Typography } from '@mui/material';
 import MainLayout from './components/MainLayout';
 import { AuthProvider } from './context/AuthContext';
 import Login from './components/Login';
+import Home from './components/Home';
 function App() {
 
-  const Home = () => <Typography variant="h4">Ana Sayfa İçeriği</Typography>;
   const About = () => <Typography variant="h4">Hakkımızda İçeriği</Typography>;
   const Contact = () => <Typography variant="h4">İletişim İçeriği</Typography>;
 

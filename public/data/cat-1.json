@@ -1,0 +1,49 @@
+{
+    "id": 1,
+    "name": "Electronics",
+    "description": "Explore our wide range of electronics, from smartphones to laptops and everything in between.",
+    "products": [
+        {
+            "id": 101,
+            "title": "Kablosuz Kulaklık",
+            "description": "Aktif gürültü engelleyici (ANC) ve 30 saat pil ömrü.Aktif gürültü engelleyici (ANC) ve 30 saat pil ömrü.Aktif gürültü engelleyici (ANC) ve 30 saat pil ömrü.Aktif gürültü engelleyici (ANC) ve 30 saat pil ömrü.Aktif gürültü engelleyici (ANC) ve 30 saat pil ömrü.Aktif gürültü engelleyici (ANC) ve 30 saat pil ömrü.Aktif gürültü engelleyici (ANC) ve 30 saat pil ömrü.Aktif gürültü engelleyici (ANC) ve 30 saat pil ömrü.Aktif gürültü engelleyici (ANC) ve 30 saat pil ömrü.Aktif gürültü engelleyici (ANC) ve 30 saat pil ömrü.",
+            "price": 1499.99,
+            "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&q=80"
+        },
+        {
+            "id": 102,
+            "title": "Mekanik Klavye",
+            "description": "RGB aydınlatmalı, Blue switch mekanik oyuncu klavyesi.",
+            "price": 2199.00,
+            "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=500&q=80"
+        },
+        {
+            "id": 103,
+            "title": "Ergonomik Mouse",
+            "description": "Yüksek hassasiyetli kablosuz ofis ve tasarım mouse'u.",
+            "price": 849.50,
+            "image": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=500&q=80"
+        },
+        {
+            "id": 104,
+            "title": "Akıllı Saat",
+            "description": "Nabız ve uyku takibi yapabilen su geçirmez akıllı saat.",
+            "price": 3299.00,
+            "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&q=80"
+        },
+        {
+            "id": 105,
+            "title": "Taşınabilir SSD (1TB)",
+            "description": "1050 MB/s okuma hızına sahip ultra hafif harici disk.",
+            "price": 2899.99,
+            "image": "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=500&q=80"
+        },
+        {
+            "id": 106,
+            "title": "Ultra HD Web Kamera",
+            "description": "Dahili mikrofonlu, 1080p 60fps yayıncı kamerası.",
+            "price": 1250.00,
+            "image": "https://images.unsplash.com/photo-1588508065123-287b28e013da?w=500&q=80"
+        }
+    ]
+}
