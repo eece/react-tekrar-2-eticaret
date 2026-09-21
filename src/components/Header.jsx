@@ -1,8 +1,12 @@
-import { AppBar, Box, Button, Chip, Container, Toolbar, Typography } from "@mui/material";
+import { AppBar, Badge, Box, Button, Chip, Container, IconButton, Toolbar, Typography } from "@mui/material";
 import { Link, Outlet, Link as RouterLink } from 'react-router-dom';
 import { useAuth } from "../context/AuthContext";
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { useCart } from "../context/CartContext";
+
 const Header = () => {
     const { user, isAuthenticated, logout } = useAuth();
+    const { totalItemsCount } = useCart();
     return (
         <AppBar position="static">
             <Container maxWidth="lg">
@@ -32,6 +36,11 @@ const Header = () => {
                             İletişim
                         </Button>
 
+                        <IconButton color="inherit" component={RouterLink} to="/cart">
+                            <Badge badgeContent={totalItemsCount} color="error">
+                                <ShoppingCartIcon />
+                            </Badge>
+                        </IconButton>
                         {isAuthenticated ? (
                             <>
                                 <Chip
@@ -49,9 +58,6 @@ const Header = () => {
                                 Giriş Yap
                             </Button>
                         )}
-
-
-
                     </Box>
                 </Toolbar>
             </Container>

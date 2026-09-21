@@ -1,7 +1,22 @@
-import { Card, CardMedia, CardContent, Typography, CardActions, Button } from "@mui/material";
+import { Card, CardMedia, CardContent, Typography, CardActions, Button, Snackbar } from "@mui/material";
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { useCart } from "../context/CartContext";
+import { useSnackbar } from "../context/SnackBarContext";
 
 const CategoryProductItem = ({ product }) => {
+    const { addToCart } = useCart();
+    const { showSnackbar } = useSnackbar();
+
+    const handleAddToCart = (product) => {
+        addToCart(product, 1);
+        showSnackbar({
+        message: `"${product.title}" sepete eklendi!`,
+        type: 'success',
+        duration: 3500,
+        });
+   };
+
+
     return (<Card
         sx={{
             height: '100%',
