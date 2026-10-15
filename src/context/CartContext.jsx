@@ -1,11 +1,12 @@
 import { createContext, useContext, useMemo } from "react";
 import { useLocalStorage } from "../hooks/useLocalStorage";
+import { useSnackbar } from "./SnackBarContext";
 
 const CartContext = createContext(null);
 
 export const CartProvider = ({ children }) => {
     const [cartItems, setCartItems, clearCart] = useLocalStorage('shopping_cart', []);
-
+    const { showSnackbar } = useSnackbar();
     const addToCart = (product, quantity) => {
         setCartItems((prevItems) => {
             // Gönderilen ürün zaten sepette var mı kontrol et
@@ -54,12 +55,22 @@ export const CartProvider = ({ children }) => {
         [cartItems]
     );
 
+    const handleClearCart = () => {
+        showSnackbar({
+        message: `Sepet temizlendi!`,
+        type: 'success',
+        duration: 3500,
+        });
+        clearCart();
+    }
+
     const value = {
         cartItems,
         addToCart,
         removeFromCart,
         updateQuantity,
         clearCart,
+        handleClearCart,
         totalItemsCount,
         totalPrice
     };

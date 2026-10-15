@@ -67,7 +67,7 @@ const CategoryProducts = ({categoryId}) => {
                     loading
                     ? // Yüklenirken gösterilecek iskelet (skeleton) kartları (6 adet)
                         Array.from(new Array(6)).map((_, index) => (
-                        <Grid item size={{ xs: 12, sm: 6, md: 4 }} key={index}>
+                        <Grid item="loading" size={{ xs: 12, sm: 6, md: 4 }} key={index}>
                             <Card sx={{ height: '100%' }}>
                                 <Skeleton variant="rectangular" height={200} />
                                 <CardContent>
@@ -79,7 +79,7 @@ const CategoryProducts = ({categoryId}) => {
                         </Grid>
                         ))
                     : products.map((product) => (
-                        <Grid item size={{ xs: 12, sm: 6, md: 4 }} key={product.id}>
+                        <Grid item={product.id?.toString()} size={{ xs: 12, sm: 6, md: 4 }} key={product.id}>
                             <CategoryProductItem product={product} />
                         </Grid>
                     ))

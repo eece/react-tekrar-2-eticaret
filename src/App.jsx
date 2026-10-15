@@ -7,6 +7,7 @@ import Login from './components/Login';
 import Home from './components/Home';
 import { CartProvider } from './context/CartContext';
 import { SnackbarProvider } from './context/SnackBarContext';
+import CartPage from './components/CartPage';
 function App() {
 
   const About = () => <Typography variant="h4">Hakkımızda İçeriği</Typography>;
@@ -24,6 +25,7 @@ function App() {
               <Route path="about" element={<About />} />
               <Route path="login" element={<Login />} />
               <Route path="contact" element={<Contact />} />
+              <Route path="cart" element={<CartPage />} />
               <Route path="*" element={<Typography variant="h4">404 - Sayfa Bulunamadı</Typography>} />
             </Route>
           </Routes>
